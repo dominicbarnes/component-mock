@@ -34,6 +34,8 @@ many methods that reflect various lifecycle events for the deku component.
 Currently, we only deal with `render`, but others will be added over time as
 we develop good testing strategies.
 
+`Component` can be a render function as well as an object.
+
 ## mock.render(component)
 
 Calls `Component.render()`. The render function will have all the parameters

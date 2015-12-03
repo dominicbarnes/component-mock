@@ -24,6 +24,15 @@ describe('mock', function () {
       mock(Component).render();
     });
 
+    it('should be passed a normalized component and noop setState', function () {
+      function Component(component, setState) {
+        assert.deepEqual(component, util.normalize(Component));
+        assert.strictEqual(setState, util.noop);
+      }
+
+      mock(Component).render();
+    });
+
     it('should return whatever the render method returns', function () {
       var ret = {};
 
